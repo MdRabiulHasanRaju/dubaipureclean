@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-20 md:pt-18 pb-8 min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="pt-20 md:pt-28 pb-8 min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{
         background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
       }}

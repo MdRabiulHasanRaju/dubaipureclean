@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Breadcrumb = ({ items }) => {
   return (
     <nav
-      className="py-28 bg-gradient-to-r from-purple-500 to-indigo-600 px-4 py-3 rounded-lg shadow text-white"
+      className="py-28 bg-gradient-to-r from-purple-500 to-indigo-600 px-4 rounded-lg shadow text-white"
       aria-label="Breadcrumb"
     >
     <div className="container-custom">

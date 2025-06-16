@@ -93,16 +93,146 @@ const Navbar = () => {
                 Home
             </NavLink>
 
-            <NavLink
-                key="services"
+            <button
+                key="DeepCleaning"
                 // onClick={() => scrollToSection("services")}
-                className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
+                className={`group font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
-                to="/services"
               >
-                Services
-            </NavLink>
+                Deep Cleaning
+                <div style={{top:'185px'}} className={`invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
+                  <div>
+                    <p className={`text-left p-1`}>Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                </div>
+            </button>
+            <button
+                key="CleaningServices"
+                // onClick={() => scrollToSection("services")}
+                className={`group font-medium transition-colors duration-300 hover:text-primary-600 ${
+                  scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
+                }`}
+              >
+                Cleaning Services
+                <div style={{top:'185px'}} className={`invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
+                  <div>
+                    <p className={`text-left p-1`}>Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                </div>
+            </button>
+            <button
+                key="TechnicalServices"
+                // onClick={() => scrollToSection("services")}
+                className={`group font-medium transition-colors duration-300 hover:text-primary-600 ${
+                  scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
+                }`}
+              >
+                Technical Services
+                <div style={{top:'185px'}} className={`invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
+                  <div>
+                    <p className={`text-left p-1`}>Technical</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                </div>
+            </button>
+            <button
+                key="PaintingServices"
+                // onClick={() => scrollToSection("services")}
+                className={`group font-medium transition-colors duration-300 hover:text-primary-600 ${
+                  scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
+                }`}
+              >
+                Painting Services
+                <div style={{top:'185px'}} className={`invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
+                  <div>
+                    <p className={`text-left p-1`}>Painting</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                </div>
+            </button>
 
             <NavLink
                 key="about"
