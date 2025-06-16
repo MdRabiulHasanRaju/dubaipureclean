@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Home from "./pages/home/Home";
 import WhatsAppButton from "./components/WhatsAppButton";
 import ServiceDetails from "./pages/services/ServiceDetails";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/service-details/:link" element={<ServiceDetails />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
         <WhatsAppButton />

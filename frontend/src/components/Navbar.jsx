@@ -59,7 +59,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {/* {navItems.map((item) => (
               item.name=='Home'?
               <NavLink 
               key={item.id}
@@ -79,7 +79,60 @@ const Navbar = () => {
               >
                 {item.name}
               </button>
-            ))}
+            ))} */}
+
+
+            <NavLink
+                key="home"
+                // onClick={() => scrollToSection("home")}
+                className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
+                  scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
+                }`}
+                to="/"
+              >
+                Home
+            </NavLink>
+
+            <NavLink
+                key="services"
+                // onClick={() => scrollToSection("services")}
+                className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
+                  scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
+                }`}
+                to="/services"
+              >
+                Services
+            </NavLink>
+
+            <NavLink
+                key="about"
+                // onClick={() => scrollToSection("about")}
+                className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
+                  scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
+                }`}
+                to="/about"
+              >
+                About
+            </NavLink>
+
+            <NavLink
+                key="contact"
+                // onClick={() => scrollToSection("contact")}
+                className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
+                  scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
+                }`}
+                to="/contact"
+              >
+                Contact
+            </NavLink>
+
+
+
+
+
+
+
+
             <button
               onClick={() => scrollToSection('contact')}
               className="btn-primary"
