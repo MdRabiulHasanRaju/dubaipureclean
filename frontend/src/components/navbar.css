@@ -1,0 +1,9 @@
+.navClass{
+    top:185px;
+}
+
+@media(min-width:1300px) {
+    .navClass{
+         top:170px;
+    }
+}

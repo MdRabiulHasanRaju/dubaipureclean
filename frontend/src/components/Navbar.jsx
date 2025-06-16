@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {NavLink} from "react-router-dom";
+import './navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,7 +102,7 @@ const Navbar = () => {
                 }`}
               >
                 Deep Cleaning
-                <div style={{top:'185px'}} className={`invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
+                <div className={`navClass invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
                   <div>
                     <p className={`text-left p-1`}>Deep Cleaning</p>
                     <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
@@ -136,7 +137,7 @@ const Navbar = () => {
                 }`}
               >
                 Cleaning Services
-                <div style={{top:'185px'}} className={`invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
+                <div className={`navClass invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
                   <div>
                     <p className={`text-left p-1`}>Cleaning</p>
                     <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
@@ -171,7 +172,7 @@ const Navbar = () => {
                 }`}
               >
                 Technical Services
-                <div style={{top:'185px'}} className={`invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
+                <div className={`navClass invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
                   <div>
                     <p className={`text-left p-1`}>Technical</p>
                     <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
@@ -206,7 +207,7 @@ const Navbar = () => {
                 }`}
               >
                 Painting Services
-                <div style={{top:'185px'}} className={`invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
+                <div className={`navClass invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}>
                   <div>
                     <p className={`text-left p-1`}>Painting</p>
                     <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
@@ -298,7 +299,7 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
         >
           <div className="bg-white rounded-lg shadow-lg mt-2 py-4">
-            {navItems.map((item) => (
+            {/* {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -306,7 +307,169 @@ const Navbar = () => {
               >
                 {item.name}
               </button>
-            ))}
+            ))} */}
+
+
+            <NavLink
+                key="home"
+                className="block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
+                to="/"
+              >
+                Home
+            </NavLink>
+
+            <button
+                key="DeepCleaning"
+                className="group block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
+              >
+                Deep Cleaning
+                <div className={`hidden max-h-56 overflow-hidden overflow-y-scroll group-hover:block  bg-white/95 text-black p-4`}>
+                  <div>
+                    <p className={`text-left p-1`}>Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                </div>
+            </button>
+            <button
+                key="CleaningServices"
+                className="group block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
+              >
+                Cleaning Services
+                <div className={`hidden max-h-56 overflow-hidden overflow-y-scroll group-hover:block  bg-white/95 text-black p-4`}>
+                  <div>
+                    <p className={`text-left p-1`}>Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                </div>
+            </button>
+            <button
+                key="TechnicalServices"
+                className="group block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
+              >
+                Technical Services
+                <div className={`hidden max-h-56 overflow-hidden overflow-y-scroll group-hover:block  bg-white/95 text-black p-4`}>
+                  <div>
+                    <p className={`text-left p-1`}>Technical</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                </div>
+            </button>
+            <button
+                key="PaintingServices"
+                className="group block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
+              >
+                Painting Services
+                <div className={`hidden max-h-56 overflow-hidden overflow-y-scroll group-hover:block  bg-white/95 text-black p-4`}>
+                  <div>
+                    <p className={`text-left p-1`}>Painting</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                  <div>
+                    <p className={`text-left p-1`}>Villa Deep Cleaning</p>
+                    <p className={`text-left p-1`}>Move In and Out Deep Cleaning</p>
+                    <p className={`text-left p-1`}>FLOOR DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>OFFICE DEEP CLEANING</p>
+                    <p className={`text-left p-1`}>SOFA SHAMPOO CLEANING</p>
+                    <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
+                  </div>
+                </div>
+            </button>
+
+            <NavLink
+                key="about"
+                className="block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
+                to="/about"
+              >
+                About
+            </NavLink>
+
+            <NavLink
+                key="contact"
+                className="block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
+                to="/contact"
+              >
+                Contact
+            </NavLink>
+
+
+
+
+
+
+
+
             <div className="px-6 pt-2">
               <button
                 onClick={() => scrollToSection('contact')}
