@@ -7,6 +7,7 @@ const Services = ({ onServiceClick }) => {
     {
       link:'villa-cleaning',
       icon: '🏡',
+      featured_image: 'https://images.unsplash.com/photo-1552242718-c5360894aecd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Villa Cleaning',
       description: 'Comprehensive cleaning for large homes and villas, including all rooms, outdoor areas, and special attention to detail.',
       features: ['Deep cleaning', 'Outdoor spaces', 'Premium care'],
@@ -15,6 +16,7 @@ const Services = ({ onServiceClick }) => {
     {
       link:'carpet-shampooing',
       icon: '🧽',
+      featured_image: 'https://images.unsplash.com/photo-1672426637977-1c84fb473464?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Carpet Shampooing',
       description: 'Professional carpet cleaning using advanced shampooing techniques to remove stains, odors, and allergens.',
       features: ['Stain removal', 'Odor elimination', 'Allergen treatment'],
@@ -23,6 +25,7 @@ const Services = ({ onServiceClick }) => {
     {
       link:'deep-cleaning',
       icon: '✨',
+      featured_image: 'https://images.unsplash.com/photo-1740660457308-e4fb36eb866a?q=80&w=2007&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Deep Cleaning',
       description: 'Thorough, detailed cleaning that reaches every corner. Perfect for seasonal cleaning or special occasions.',
       features: ['Every corner', 'Detailed work', 'Seasonal perfect'],
@@ -31,22 +34,25 @@ const Services = ({ onServiceClick }) => {
     {
       link:'villa-cleaning',
       icon: '📦',
+      featured_image: 'https://images.unsplash.com/photo-1579141132886-e86d831034ac?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Move In/Out',
       description: 'Complete cleaning service for moving situations. We ensure your old or new place is spotless.',
       features: ['Complete service', 'Move-ready', 'Spotless results'],
       price: 'From $200'
     },
     {
-      link:'villa-cleaning',
+      link:'window-cleaning',
       icon: '🪟',
+      featured_image: 'https://images.unsplash.com/photo-1482449609509-eae2a7ea42b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Window Cleaning',
       description: 'Crystal clear windows inside and out. Professional equipment ensures streak-free, sparkling results.',
       features: ['Inside & outside', 'Streak-free', 'Professional tools'],
       price: 'From $60'
     },
     {
-      link:'villa-cleaning',
+      link:'office-cleaning',
       icon: '🏢',
+      featured_image: 'https://images.unsplash.com/photo-1542089363-bba089ffaa25?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Office Cleaning',
       description: 'Maintain a professional work environment with our regular office cleaning services.',
       features: ['Regular service', 'Professional space', 'Flexible schedule'],
@@ -93,7 +99,8 @@ const Services = ({ onServiceClick }) => {
             >
               {/* Card Header */}
               <div className="bg-gradient-to-r from-primary-50 to-secondary-50 p-6 group-hover:from-primary-100 group-hover:to-secondary-100 transition-colors duration-300">
-                <div className="text-4xl mb-4">{service.icon}</div>
+                {/* <div className="text-4xl mb-4">{service.icon}</div> */}
+                <img className='aspect-video object-cover' src={service.featured_image} alt="Featured Image" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                 <div className="text-2xl font-bold text-primary-600">{service.price}</div>
               </div>

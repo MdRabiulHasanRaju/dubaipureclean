@@ -46,6 +46,7 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
+          <NavLink to="/">
           <motion.div
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
@@ -57,6 +58,7 @@ const Navbar = () => {
               Dubai Pure Clean
             </span>
           </motion.div>
+          </NavLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -97,7 +99,7 @@ const Navbar = () => {
             <button
                 key="DeepCleaning"
                 // onClick={() => scrollToSection("services")}
-                className={`group font-medium transition-colors duration-300 hover:text-primary-600 ${
+                className={`group hover:bg-white/95 hover:p-2 font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
               >
@@ -132,7 +134,7 @@ const Navbar = () => {
             <button
                 key="CleaningServices"
                 // onClick={() => scrollToSection("services")}
-                className={`group font-medium transition-colors duration-300 hover:text-primary-600 ${
+                className={`group hover:bg-white/95 hover:p-2 font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
               >
@@ -167,7 +169,7 @@ const Navbar = () => {
             <button
                 key="TechnicalServices"
                 // onClick={() => scrollToSection("services")}
-                className={`group font-medium transition-colors duration-300 hover:text-primary-600 ${
+                className={`group hover:bg-white/95 hover:p-2 font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
               >
@@ -202,7 +204,7 @@ const Navbar = () => {
             <button
                 key="PaintingServices"
                 // onClick={() => scrollToSection("services")}
-                className={`group font-medium transition-colors duration-300 hover:text-primary-600 ${
+                className={`group hover:bg-white/95 hover:p-2 font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
               >
