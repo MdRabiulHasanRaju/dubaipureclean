@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
 import './navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const {pathname} = useLocation();
+
+  useEffect(()=>{
+    setIsOpen(false)
+  },[pathname])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,14 +30,6 @@ const Navbar = () => {
     }
   };
 
-  const navItems = [
-    { name: 'Home', id: 'home' },
-    { name: 'About', id: 'about' },
-    { name: 'Services', id: 'services' },
-    { name: 'Why Choose Us', id: 'why-choose' },
-    { name: 'Testimonials', id: 'testimonials' },
-    { name: 'Contact', id: 'contact' }
-  ];
 
   return (
     <motion.nav
@@ -62,32 +59,8 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* {navItems.map((item) => (
-              item.name=='Home'?
-              <NavLink 
-              key={item.id}
-              className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
-                  scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
-                }`} 
-                to="/">
-                  Home
-              </NavLink>
-              :
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
-                  scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
-                }`}
-              >
-                {item.name}
-              </button>
-            ))} */}
-
-
             <NavLink
                 key="home"
-                // onClick={() => scrollToSection("home")}
                 className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
@@ -98,7 +71,6 @@ const Navbar = () => {
 
             <button
                 key="DeepCleaning"
-                // onClick={() => scrollToSection("services")}
                 className={`group hover:bg-white/95 hover:p-2 font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
@@ -133,7 +105,6 @@ const Navbar = () => {
             </button>
             <button
                 key="CleaningServices"
-                // onClick={() => scrollToSection("services")}
                 className={`group hover:bg-white/95 hover:p-2 font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
@@ -168,7 +139,6 @@ const Navbar = () => {
             </button>
             <button
                 key="TechnicalServices"
-                // onClick={() => scrollToSection("services")}
                 className={`group hover:bg-white/95 hover:p-2 font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
@@ -203,7 +173,6 @@ const Navbar = () => {
             </button>
             <button
                 key="PaintingServices"
-                // onClick={() => scrollToSection("services")}
                 className={`group hover:bg-white/95 hover:p-2 font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
@@ -239,7 +208,6 @@ const Navbar = () => {
 
             <NavLink
                 key="about"
-                // onClick={() => scrollToSection("about")}
                 className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
@@ -250,7 +218,6 @@ const Navbar = () => {
 
             <NavLink
                 key="contact"
-                // onClick={() => scrollToSection("contact")}
                 className={`font-medium transition-colors duration-300 hover:text-primary-600 ${
                   scrolled ? 'text-gray-700' : 'text-white hover:text-primary-200'
                 }`}
@@ -295,23 +262,12 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <motion.div
-          className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? 'auto' : 0 }}
+          className={`md:hidden`}
+          initial={{ display: 'none', height: 0 }}
+          animate={{ display: isOpen ? 'block' : 'none', height: isOpen ? 'auto' : 0 }}
           transition={{ duration: 0.3 }}
         >
           <div className="bg-white rounded-lg shadow-lg mt-2 py-4">
-            {/* {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
-              >
-                {item.name}
-              </button>
-            ))} */}
-
-
             <NavLink
                 key="home"
                 className="block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
@@ -464,12 +420,6 @@ const Navbar = () => {
               >
                 Contact
             </NavLink>
-
-
-
-
-
-
 
 
             <div className="px-6 pt-2">
