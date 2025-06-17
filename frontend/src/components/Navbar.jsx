@@ -48,12 +48,7 @@ const Navbar = () => {
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">✨</span>
-            </div>
-            <span className={`text-xl font-bold ${scrolled ? 'text-gray-800' : 'text-white'}`}>
-              Dubai Pure Clean
-            </span>
+            <img className='w-32' src="/images/logo.png" alt="logo-dubaipureclean" />
           </motion.div>
           </NavLink>
 

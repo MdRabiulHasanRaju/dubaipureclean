@@ -22,12 +22,7 @@ const Footer = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">✨</span>
-              </div>
-              <span className="text-2xl font-bold">Dubai Pure Clean</span>
-            </div>
+            <img className='w-32' src="/images/logo.png" alt="logo-dubaipureclean" />
             <p className="text-gray-300 mb-6 leading-relaxed">
               Your trusted partner for professional cleaning services. We transform spaces 
               with eco-friendly solutions and exceptional attention to detail.
