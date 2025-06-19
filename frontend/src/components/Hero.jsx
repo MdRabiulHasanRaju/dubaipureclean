@@ -12,6 +12,19 @@ const Hero = () => {
     }
   };
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "+9710504370732";
+    const message = 'Hi! I would like to know more about your cleaning services.';
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url,'_blank')
+  }
+
+  const handleCallClick = () => {
+    const phoneNumber = "+9710504370732";
+    const url = `tel:`;
+    window.open(url,'_blank')
+  }
+
   return (
     <section
       id="home"
@@ -62,10 +75,10 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <button
-                onClick={scrollToContact}
+                onClick={handleCallClick}
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
               >
-                Get Free Quote
+              📞 Book Now
               </button>
               <button
                 onClick={() =>
@@ -137,7 +150,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <div className="text-center">
-                <div className="text-4xl font-bold text-yellow-400">500+</div>
+                <div className="text-4xl font-bold text-yellow-400">300+</div>
                 <div className="text-white/80 mt-2">Happy Customers</div>
               </div>
               <div className="text-center">

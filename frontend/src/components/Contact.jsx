@@ -229,7 +229,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Find Us</h3>
               <div className="relative rounded-lg overflow-hidden h-64">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2175841302896!2d-73.98656668459372!3d40.75886497932741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1635959896579!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57796.63180580622!2d55.217929!3d25.125902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6bdba28bcc31%3A0x6481e0195a2831a0!2sAl%20Quoz%20-%20Al%20Quoz%20Industrial%20Area%203%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sbd!4v1750327996691!5m2!1sen!2sbd"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
