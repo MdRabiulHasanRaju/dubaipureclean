@@ -109,7 +109,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3">
               <span className="text-primary-400">📞</span>
-              <span className="text-gray-300">+9710504370732, +9710561743356</span>
+              <span className="text-gray-300">+9710561743356</span>
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3">
               <span className="text-primary-400">✉️</span>
@@ -121,7 +121,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © {currentYear} Dubai Pure Clean. All rights reserved. | Privacy Policy | Terms of Service
+            © {currentYear} Just Clean Dubai. All rights reserved. | Privacy Policy | Terms of Service
           </p>
         </div>
       </div>

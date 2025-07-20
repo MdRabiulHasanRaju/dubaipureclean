@@ -2,8 +2,18 @@
     top:183px;
 }
 
+@media(min-width:900px) {
+    .navClass{
+         top:220px;
+    }
+}
+@media(min-width:1200px) {
+    .navClass{
+         top:185px;
+    }
+}
 @media(min-width:1300px) {
     .navClass{
-         top:170px;
+         top:180px;
     }
 }

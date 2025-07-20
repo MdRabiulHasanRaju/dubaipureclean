@@ -13,10 +13,10 @@ const About = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              About <span className="text-primary-600">Dubai Pure Clean</span>
+              About <span className="text-primary-600">Just Clean Dubai</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              With over 5 years of experience in the cleaning industry, Dubai Pure Clean has been 
+              With over 5 years of experience in the cleaning industry, Just Clean Dubai has been 
               transforming homes and offices across the city. We're not just a cleaning service – 
               we're your partners in creating healthy, beautiful spaces.
             </p>

@@ -45,7 +45,7 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Why Choose <span className="text-primary-600">Dubai Pure Clean</span>?
+            Why Choose <span className="text-primary-600">Just Clean Dubai</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We're committed to providing exceptional cleaning services that exceed your expectations. 

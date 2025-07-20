@@ -2,6 +2,7 @@ import { useState ,useEffect } from 'react';
 import {useParams } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { servicesData } from '../../data/servicesData';
+import { Helmet } from 'react-helmet-async';
 
 const ServiceDetails = () => {
   const { link } = useParams();
@@ -42,9 +43,13 @@ const ServiceDetails = () => {
     return <div className="min-h-screen flex justify-center items-center text-xl">Loading...</div>;
   }
 
-
   return (
     <>
+    <Helmet>
+        <title>{service.title} | Just Clean Dubai</title>
+        <meta name='title' content={service.title}/>
+        <meta name='description' content={service.title}/>
+    </Helmet>
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative">
@@ -283,11 +288,11 @@ const ServiceDetails = () => {
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <span className="text-primary-600">📞</span>
-                      <span className="text-gray-600">+9710504370732, +9710561743356</span>
+                      <span className="text-gray-600">+9710561743356</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <span className="text-primary-600">✉️</span>
-                      <span className="text-gray-600">info@DubaiPureClean.com</span>
+                      <span className="text-gray-600">info@Justcleandubai.com</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <span className="text-primary-600">🕒</span>

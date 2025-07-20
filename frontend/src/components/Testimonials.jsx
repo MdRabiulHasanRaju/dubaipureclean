@@ -7,42 +7,42 @@ const Testimonials = () => {
       role: 'Homeowner',
       image: 'https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5,
-      text: 'Dubai Pure Clean transformed my home! Their attention to detail is incredible, and I love that they use eco-friendly products. My family feels safer and my house has never looked better.'
+      text: 'Just Clean Dubai transformed my home! Their attention to detail is incredible, and I love that they use eco-friendly products. My family feels safer and my house has never looked better.'
     },
     {
       name: 'Michael Chen',
       role: 'Business Owner',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5,
-      text: 'We\'ve been using Dubai Pure Clean for our office cleaning for over 2 years. They\'re reliable, professional, and always exceed our expectations. Highly recommend!'
+      text: 'We\'ve been using Just Clean Dubai for our office cleaning for over 2 years. They\'re reliable, professional, and always exceed our expectations. Highly recommend!'
     },
     {
       name: 'Emily Davis',
       role: 'Working Mom',
       image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5,
-      text: 'As a busy mom, Dubai Pure Clean has been a lifesaver. They\'re flexible with scheduling and do an amazing job. I can focus on my family while they take care of the cleaning.'
+      text: 'As a busy mom, Just Clean Dubai has been a lifesaver. They\'re flexible with scheduling and do an amazing job. I can focus on my family while they take care of the cleaning.'
     },
     {
       name: 'David Rodriguez',
       role: 'Property Manager',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5,
-      text: 'I manage multiple properties and Dubai Pure Clean handles move-in/move-out cleaning for all of them. They\'re thorough, punctual, and make my job so much easier.'
+      text: 'I manage multiple properties and Just Clean Dubai handles move-in/move-out cleaning for all of them. They\'re thorough, punctual, and make my job so much easier.'
     },
     {
       name: 'Lisa Thompson',
       role: 'Retired Teacher',
       image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5,
-      text: 'I was hesitant about hiring a cleaning service, but Dubai Pure Clean exceeded all my expectations. They treat my home with such care and respect. Couldn\'t be happier!'
+      text: 'I was hesitant about hiring a cleaning service, but Just Clean Dubai exceeded all my expectations. They treat my home with such care and respect. Couldn\'t be happier!'
     },
     {
       name: 'James Wilson',
       role: 'Tech Executive',
       image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=150',
       rating: 5,
-      text: 'Professional, efficient, and trustworthy. Dubai Pure Clean does an excellent job cleaning our villa. The team is courteous and always leaves everything spotless.'
+      text: 'Professional, efficient, and trustworthy. Just Clean Dubai does an excellent job cleaning our villa. The team is courteous and always leaves everything spotless.'
     }
   ];
 
@@ -122,7 +122,7 @@ const Testimonials = () => {
         >
           <h3 className="text-3xl font-bold mb-4">Join Our Happy Customers</h3>
           <p className="text-xl mb-8 opacity-90">
-            Experience the Dubai Pure Clean difference and see why our customers love us.
+            Experience the Just Clean Dubai difference and see why our customers love us.
           </p>
           <button
             onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}

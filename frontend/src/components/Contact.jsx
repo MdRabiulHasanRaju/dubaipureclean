@@ -51,7 +51,7 @@ const Contact = () => {
             Get In <span className="text-primary-600">Touch</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to experience the Dubai Pure Clean difference? Contact us today for a free quote 
+            Ready to experience the Just Clean Dubai difference? Contact us today for a free quote 
             and let us transform your space.
           </p>
         </motion.div>
@@ -195,7 +195,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+9710504370732, +9710561743356</p>
+                    <p className="text-gray-600">+9710561743356</p>
                   </div>
                 </div>
 
@@ -205,7 +205,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">info@DubaiPureClean.com</p>
+                    <p className="text-gray-600">info@Justcleandubai.com</p>
                   </div>
                 </div>
 
@@ -236,7 +236,7 @@ const Contact = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Dubai Pure Clean Location"
+                  title="Just Clean Dubai Location"
                 ></iframe>
               </div>
             </div>

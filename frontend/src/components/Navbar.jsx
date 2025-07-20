@@ -48,7 +48,7 @@ const Navbar = () => {
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
           >
-            <img className='w-32' src="/images/logo.png" alt="logo-dubaipureclean" />
+            <img className='w-32' src="/images/logo.png" alt="logo-just clean dubai" />
           </motion.div>
           </NavLink>
 

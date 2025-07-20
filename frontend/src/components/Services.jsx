@@ -102,7 +102,7 @@ const Services = ({ onServiceClick }) => {
                 {/* <div className="text-4xl mb-4">{service.icon}</div> */}
                 <img className='aspect-video object-cover' src={service.featured_image} alt="Featured Image" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                <div className="text-2xl font-bold text-primary-600">{service.price}</div>
+                {/* <div className="text-2xl font-bold text-primary-600">{service.price}</div> */}
               </div>
 
               {/* Card Body */}
