@@ -1,19 +1,20 @@
-.navClass{
-    top:183px;
+.navClass {
+    /* top: 183px; */
+    margin-top: 7px;
+    margin-left: -220px;
 }
-
 @media(min-width:900px) {
     .navClass{
-         top:220px;
+         /* top:220px; */
     }
 }
 @media(min-width:1200px) {
     .navClass{
-         top:185px;
+         /* top:185px; */
     }
 }
 @media(min-width:1300px) {
     .navClass{
-         top:180px;
+         /* top:180px; */
     }
 }

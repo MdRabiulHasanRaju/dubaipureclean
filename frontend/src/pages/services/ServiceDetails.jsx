@@ -1,43 +1,62 @@
 import { useState ,useEffect } from 'react';
-import {useParams } from "react-router-dom";
+import {useParams ,NavLink} from "react-router-dom";
 import { motion } from 'framer-motion';
-import { servicesData } from '../../data/servicesData';
+// import { servicesData } from '../../data/servicesData';
 import { Helmet } from 'react-helmet-async';
+import "summernote/dist/summernote-lite.css";
+import "./ServiceDetails.css"
 
 const ServiceDetails = () => {
   const { link } = useParams();
   const [service, setService] = useState(null);
+  const [serviceNameByCat, setserviceNameByCat] = useState([]);
 
   useEffect(() => {
-    const serviceData = servicesData.find(s => s.id == link);
-    setService(serviceData);
-  }, [link]);
+    // const serviceData = servicesData.find(s => s.id == link);
+    // setService(serviceData);
+
+    const getServiceDetails = async () => {
+      const req = await fetch("http://localhost/dubaipureclean-backend/service/getsingleservice/"+link);
+      const data =  await req.json();
+      setService(data[0]);
+
+      const getServiceNameBycat = async () => {
+          const Catreq = await fetch("http://localhost/dubaipureclean-backend/service/servicesByCategory/"+data[0].category_id);
+          const Catdata =  await Catreq.json();
+          setserviceNameByCat(Catdata);
+      } 
+      getServiceNameBycat();
+
+    }
+
+    getServiceDetails();
+  }, []);
 
 
-  const [selectedPackage, setSelectedPackage] = useState(0);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    address: '',
-    preferredDate: '',
-    preferredTime: '',
-    specialRequests: ''
-  });
+  // const [selectedPackage, setSelectedPackage] = useState(0);
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   address: '',
+  //   preferredDate: '',
+  //   preferredTime: '',
+  //   specialRequests: ''
+  // });
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // const handleInputChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
 
-  const handleBooking = (e) => {
-    e.preventDefault();
-    // In a real application, you would send this data to your backend
-    console.log('Booking submitted:', { service, package: service.packages[selectedPackage], formData });
-    alert('Booking request submitted! We\'ll contact you within 24 hours to confirm.');
-  };
+  // const handleBooking = (e) => {
+  //   e.preventDefault();
+  //   // In a real application, you would send this data to your backend
+  //   console.log('Booking submitted:', { service, package: service.packages[selectedPackage], formData });
+  //   alert('Booking request submitted! We\'ll contact you within 24 hours to confirm.');
+  // };
 
   if (!service) {
     return <div className="min-h-screen flex justify-center items-center text-xl">Loading...</div>;
@@ -55,7 +74,7 @@ const ServiceDetails = () => {
       <section className="relative">
         <div className="relative h-96 overflow-hidden">
           <img
-            src={service.detailImage}
+            src={`http://localhost/dubaipureclean-backend/uploads/services/${service.banner_image}`}
             alt={service.title}
             className="w-full h-full object-cover"
           />
@@ -68,10 +87,10 @@ const ServiceDetails = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">{service.title}</h1>
-                <p className="text-xl md:text-2xl opacity-90 mb-6">{service.subtitle}</p>
-                <div className="flex flex-wrap gap-4">
+                {/* <div className="text-5xl mb-4">{service.icon}</div> */}
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
+                <p className="text-xl md:text-xl opacity-90 mb-6">{service.sub_title}</p>
+                {/* <div className="flex flex-wrap gap-4">
                   {service.features.map((feature, index) => (
                     <span
                       key={index}
@@ -80,7 +99,7 @@ const ServiceDetails = () => {
                       {feature}
                     </span>
                   ))}
-                </div>
+                </div> */}
               </motion.div>
             </div>
           </div>
@@ -101,10 +120,14 @@ const ServiceDetails = () => {
                 transition={{ duration: 0.8 }}
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Service Overview</h2>
-                <p className="text-lg text-gray-600 leading-relaxed mb-8">{service.fullDescription}</p>
+                {/* <p className="text-lg text-gray-600 leading-relaxed mb-8">{service.description}</p> */}
+                <div 
+                  className="prose max-w-none service-description"   // Tailwind দিলে সুন্দর দেখাবে
+                  dangerouslySetInnerHTML={{ __html: service.description }}
+                />
                 
                 {/* What's Included */}
-                <h3 className="text-2xl font-semibold text-gray-900 mb-6">What's Included</h3>
+                {/* <h3 className="text-2xl font-semibold text-gray-900 mb-6">What's Included</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {service.included.map((item, index) => (
                     <div key={index} className="flex items-start space-x-3">
@@ -114,11 +137,11 @@ const ServiceDetails = () => {
                       <span className="text-gray-700">{item}</span>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </motion.div>
 
               {/* Process */}
-              <motion.div
+              {/* <motion.div
                 className="bg-white rounded-2xl shadow-lg p-8 mb-8"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -138,10 +161,10 @@ const ServiceDetails = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div> */}
 
               {/* FAQ */}
-              <motion.div
+              {/* <motion.div
                 className="bg-white rounded-2xl shadow-lg p-8"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -156,19 +179,19 @@ const ServiceDetails = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
 
             {/* Booking Sidebar */}
             <div className="lg:col-span-1">
               <motion.div
-                className="bg-white rounded-2xl shadow-lg p-8 sticky top-24"
+                className="bg-white rounded-2xl shadow-lg p-8"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
                 {/* Package Selection */}
-                <div className="mb-8">
+                {/* <div className="mb-8">
                   <h3 className="text-xl font-semibold text-gray-900 mb-6">Choose Your Package</h3>
                   <div className="space-y-4">
                     {service.packages.map((pkg, index) => (
@@ -193,10 +216,10 @@ const ServiceDetails = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Booking Form */}
-                <form onSubmit={handleBooking} className="space-y-4">
+                {/* <form onSubmit={handleBooking} className="space-y-4">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Book This Service</h3>
                   
                   <input
@@ -280,10 +303,26 @@ const ServiceDetails = () => {
                   <p className="text-xs text-gray-500 text-center">
                     * We'll contact you within 24 hours to confirm your booking
                   </p>
-                </form>
+                </form> */}
+
+                
+                  
+                    <h3 className="text-xl font-semibold text-center mb-4 btn-primary">{service.category_name}</h3>
+                  <div className="other-service">
+                    {serviceNameByCat.map((catName)=>(
+                         <p style={catName.id==service.id?{backgroundColor:"gray",color:"white"}:null} key={catName.id}><NavLink 
+                         className="text-xl" 
+                         to={`/service-details/${catName.link}`}>
+                          {catName.title}</NavLink> 
+                          </p>
+                    ))}
+                    
+                  </div>
+                  
 
                 {/* Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-200">
+                <div className="mt-8 pt-6 ">
+                  <h3 className="mb-4 text-xl font-semibold text-center btn-primary">Contact with Us</h3>
                   <h4 className="font-semibold text-gray-900 mb-4">Need Help?</h4>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">

@@ -109,7 +109,7 @@ const Navbar = () => {
             >
               {category.name}
               <div
-                className={`navClass invisible group-hover:visible flex absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white/95 text-black p-4`}
+                className={`navClass invisible group-hover:visible flex absolute bg-white/95 text-black p-4`}
               >
                 {/* services filter by category */}
                 {services
@@ -123,7 +123,7 @@ const Navbar = () => {
                   .map((chunk, chunkIndex) => (
                     <div key={chunkIndex} className="mr-6">
                       {chunk.map((service) => (
-                        <NavLink to={service.link} key={service.id} className="text-left p-1">
+                        <NavLink to={`/service-details/${service.link}`} key={service.id} className="text-left p-1">
                           {service.title} <br />
                         </NavLink>
                         

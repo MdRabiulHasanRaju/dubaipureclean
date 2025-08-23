@@ -1,0 +1,14 @@
+.service-description a{
+    color:rgb(44, 127, 210);
+}
+.other-service{
+    padding: 5px;
+}
+.other-service p{
+    padding: 5px;
+    border-bottom: 1px solid #ededed;
+    border-radius: 6px;
+}
+.other-service p:hover{
+    background-color: rgb(242, 242, 254);
+}
