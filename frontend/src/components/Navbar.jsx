@@ -204,7 +204,40 @@ const Navbar = () => {
               Home
             </NavLink>
 
+
+            {categories.map((category) => (
             <button
+              key={category.id}
+              className={`group block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300`}
+            >
+              {category.name}
+              <div
+                className={`hidden max-h-56 overflow-hidden overflow-y-scroll group-hover:block  bg-white/95 text-black p-4`}
+              >
+                {/* services filter by category */}
+                {services
+                  .filter((srv) => srv.category_id === category.id)
+                  .reduce((rows, srv, i) => {
+                    // প্রতি 6 টা item এ নতুন array বানাচ্ছি
+                    if (i % 8 === 0) rows.push([]);
+                    rows[rows.length - 1].push(srv);
+                    return rows;
+                  }, [])
+                  .map((chunk, chunkIndex) => (
+                    <div key={chunkIndex} className="mr-6">
+                      {chunk.map((service) => (
+                        <NavLink to={`/service-details/${service.link}`} key={service.id} className="text-left p-1">
+                          {service.title} <br />
+                        </NavLink>
+                        
+                      ))}
+                    </div>
+                  ))}
+              </div>
+            </button>
+          ))}
+
+            {/* <button
               key="DeepCleaning"
               className="group block w-full text-left px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors duration-300"
             >
@@ -363,7 +396,7 @@ const Navbar = () => {
                   <p className={`text-left p-1`}>KITCHEN DEEP CLEANING</p>
                 </div>
               </div>
-            </button>
+            </button> */}
 
             <NavLink
               key="about"

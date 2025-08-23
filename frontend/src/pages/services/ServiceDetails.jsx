@@ -30,7 +30,7 @@ const ServiceDetails = () => {
     }
 
     getServiceDetails();
-  }, []);
+  }, [link]);
 
 
   // const [selectedPackage, setSelectedPackage] = useState(0);
