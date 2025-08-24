@@ -310,7 +310,7 @@ const ServiceDetails = () => {
                     <h3 className="text-xl font-semibold text-center mb-4 btn-primary">{service.category_name}</h3>
                   <div className="other-service">
                     {serviceNameByCat.map((catName)=>(
-                         <p style={catName.id==service.id?{backgroundColor:"gray",color:"white"}:null} key={catName.id}><NavLink 
+                         <p style={catName.id==service.id?{color:"#d87d28"}:null} key={catName.id}><NavLink 
                          className="text-xl" 
                          to={`/service-details/${catName.link}`}>
                           {catName.title}</NavLink> 
@@ -323,7 +323,7 @@ const ServiceDetails = () => {
                 {/* Contact Info */}
                 <div className="mt-8 pt-6 ">
                   <h3 className="mb-4 text-xl font-semibold text-center btn-primary">Contact with Us</h3>
-                  <h4 className="font-semibold text-gray-900 mb-4">Need Help?</h4>
+                  <h4 className="font-semibold text-gray-900 mb-4">Need Same Day Service? </h4>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <span className="text-primary-600">📞</span>
