@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,23 +50,16 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {[
-                { name: 'Home', id: 'home' },
-                { name: 'About Us', id: 'about' },
-                { name: 'Services', id: 'services' },
-                { name: 'Why Choose Us', id: 'why-choose' },
-                { name: 'Testimonials', id: 'testimonials' },
-                { name: 'Contact', id: 'contact' }
-              ].map((link) => (
-                <li key={link.id}>
-                  <button
-                    onClick={() => scrollToSection(link.id)}
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
-                  >
-                    {link.name}
-                  </button>
+                <li key="home">
+                  <NavLink key="home" to="/">Home</NavLink>
                 </li>
-              ))}
+                <li key="about">
+                  <NavLink key="about" to="/about">About Us</NavLink>
+                </li>
+                <li key="contact">
+                  <NavLink key="contact" to="/contact">Contact Us</NavLink>
+                </li>
+                
             </ul>
           </motion.div>
 
@@ -78,18 +72,26 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-6">Services</h4>
             <ul className="space-y-3">
-              {[
-                'Villa Cleaning',
-                'Carpet Shampooing',
-                'Deep Cleaning',
-                'Move In/Out',
-                'Window Cleaning',
-                'Office Cleaning'
-              ].map((service) => (
-                <li key={service}>
-                  <span className="text-gray-300">{service}</span>
+                <li key="villa-deep-cleaning">
+                  <span className="text-gray-300">
+                    <NavLink key="villa-deep-cleaning" to="/service-details/villa-deep-cleaning">Villa Deep Cleaning</NavLink>
+                  </span>
                 </li>
-              ))}
+                <li key="Residential-Deep-Cleaning-Services-in-Dubai">
+                  <span className="text-gray-300">
+                    <NavLink key="Residential-Deep-Cleaning-Services-in-Dubai" to="/service-details/Residential-Deep-Cleaning-Services-in-Dubai">Residential Deep Cleaning</NavLink>
+                  </span>
+                </li>
+                <li key="window-cleaning-in-dubai">
+                  <span className="text-gray-300">
+                    <NavLink key="window-cleaning-in-dubai" to="/service-details/window-cleaning-in-dubai">Window Cleaning</NavLink>
+                  </span>
+                </li>
+                <li key="ac-cleaning-services-in-dubai">
+                  <span className="text-gray-300">
+                    <NavLink key="ac-cleaning-services-in-dubai" to="/service-details/ac-cleaning-services-in-dubai">AC Cleaning Services</NavLink>
+                  </span>
+                </li>
             </ul>
           </motion.div>
         </div>
@@ -113,7 +115,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3">
               <span className="text-primary-400">✉️</span>
-              <span className="text-gray-300">info@DubaiPureClean.com</span>
+              <span className="text-gray-300">info@justcleandubai.com</span>
             </div>
           </div>
         </motion.div>
@@ -122,6 +124,9 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {currentYear} Just Clean Dubai. All rights reserved. | Privacy Policy | Terms of Service
+          </p>
+          <p className="text-gray-400">
+            <a target='_blank' href="https://www.linkedin.com/in/mdrabiulhasanraju">Developed By Md Rabiul Hasan</a>
           </p>
         </div>
       </div>

@@ -52,6 +52,18 @@ const ServiceDetails = () => {
         <title>{service.title} | Just Clean Dubai</title>
         <meta name='title' content={service.title}/>
         <meta name='description' content={service.title}/>
+
+        <meta name="creator" content="@Md Rabiul Hasan" />
+
+        <meta property="og:site_name" content="Dubai's Top Deep Cleaning Services Provider | Just Clean Dubai" />
+        <meta property="og:title" content={service.meta_title} />
+        <meta property="og:image" content={`${url}/uploads/services/${service.banner_image}`} />
+        <meta data-n-head="ssr" data-hid="og:image:type" property="og:image:type" content="image/png" />
+        <meta property="og:image:alt" content={service.title} />
+        <meta property="og:type" content="Website" />
+        <meta property="og:description" content={service.meta_description} />
+        <meta property="og:url" content="https://justcleandubai.com" />
+        <link rel="canonical" href={window.location.href} />
     </Helmet>
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
