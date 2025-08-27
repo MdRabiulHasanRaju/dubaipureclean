@@ -13,15 +13,15 @@ const Hero = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+9710504370732";
+    const phoneNumber = "+9710561743356";
     const message = 'Hi! I would like to know more about your cleaning services.';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url,'_blank')
   }
 
   const handleCallClick = () => {
-    const phoneNumber = "+9710504370732";
-    const url = `tel:`;
+    const phoneNumber = "+9710561743356";
+    const url = `tel:+9710561743356`;
     window.open(url,'_blank')
   }
 
@@ -75,7 +75,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <button
-                onClick={handleCallClick}
+                onClick={handleWhatsAppClick}
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
               >
               📞 Book Now

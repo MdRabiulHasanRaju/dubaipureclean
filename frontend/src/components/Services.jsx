@@ -6,10 +6,14 @@ import { servicesData } from '../data/servicesData';
 const Services = ({ onServiceClick }) => {
   const [services, setService] = useState([]);
 
+  const production = "https://server.justcleandubai.com";
+  const development = "http://localhost/dubaipureclean-backend";
+
+  const url = development;
 
     useEffect(() => {
       const getService = async () => {
-        const req = await fetch("http://localhost/dubaipureclean-backend/service/servicesForHomePage/1");
+        const req = await fetch(`${url}/service/servicesForHomePage/1`);
         const data =  await req.json();
         setService(data);
       }
@@ -56,7 +60,7 @@ const Services = ({ onServiceClick }) => {
               {/* Card Header */}
               <div className="bg-gradient-to-r from-primary-50 to-secondary-50 p-6 group-hover:from-primary-100 group-hover:to-secondary-100 transition-colors duration-300">
                 {/* <div className="text-4xl mb-4">{service.icon}</div> */}
-                <img className='aspect-video object-cover' src={`http://localhost/dubaipureclean-backend/uploads/services/${service.featured_image}`} alt="Featured Image" />
+                <img className='aspect-video object-cover' src={`${url}/uploads/services/${service.featured_image}`} alt="Featured Image" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                 {/* <div className="text-2xl font-bold text-primary-600">{service.price}</div> */}
               </div>
