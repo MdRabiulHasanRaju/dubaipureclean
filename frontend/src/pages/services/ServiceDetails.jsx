@@ -2,6 +2,7 @@ import { useState ,useEffect } from 'react';
 import {useParams ,NavLink} from "react-router-dom";
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import Testimonials from '../../components/Testimonials';
 import "summernote/dist/summernote-lite.css";
 import "./ServiceDetails.css"
 
@@ -98,7 +99,7 @@ const ServiceDetails = () => {
                 />
               </motion.div>
 
-              {/* ✅ FAQ Section */}
+              {/* FAQ Section */}
               {faqs.length > 0 && (
                 <motion.div
                   className="bg-white rounded-2xl shadow-lg p-8"
@@ -179,6 +180,7 @@ const ServiceDetails = () => {
         </div>
       </section>
     </div>
+    <Testimonials />
     </>
   );
 };
