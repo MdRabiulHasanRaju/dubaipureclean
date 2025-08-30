@@ -107,35 +107,35 @@ const Hero = () => {
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="https://images.pexels.com/photos/6195273/pexels-photo-6195273.jpeg"
+                  src="/images/slider/deep Cleaning services.png"
                   alt="slider image"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="https://images.pexels.com/photos/6195277/pexels-photo-6195277.jpeg"
+                  src="/images/slider/deep Cleaning service.png"
                   alt="slider image"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="https://images.pexels.com/photos/6195277/pexels-photo-6195277.jpeg"
+                  src="/images/slider/window Cleaning service.png"
                   alt="slider image"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="https://images.pexels.com/photos/6195277/pexels-photo-6195277.jpeg"
+                  src="/images/slider/dubai deep Cleaning services.png"
                   alt="slider image"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="https://images.pexels.com/photos/6195277/pexels-photo-6195277.jpeg"
+                  src="/images/slider/deep Cleaning service dubai.png"
                   alt="slider image"
                 />
               </SwiperSlide>
