@@ -111,7 +111,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3">
               <span className="text-primary-400">📞</span>
-              <span className="text-gray-300">+9710561743356</span>
+              <span className="text-gray-300"><a href="tel:+971557940881">+971 55 794 0881</a></span>
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3">
               <span className="text-primary-400">✉️</span>

@@ -13,15 +13,15 @@ const Hero = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+9710561743356";
+    const phoneNumber = "+971557940881";
     const message = 'Hi! I would like to know more about your cleaning services.';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url,'_blank')
   }
 
   const handleCallClick = () => {
-    const phoneNumber = "+9710561743356";
-    const url = `tel:+9710561743356`;
+    const phoneNumber = "+971557940881";
+    const url = `tel:+971557940881`;
     window.open(url,'_blank')
   }
 
@@ -75,10 +75,12 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <button
-                onClick={handleWhatsAppClick}
+                // onClick={handleWhatsAppClick}
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-gray-900 font-bold py-4 px-8 rounded-lg text-lg shadow-2xl transform hover:scale-105 transition-all duration-300"
               >
-              📞 Book Now
+                <a href="https://wa.me/+971557940881">
+                    📞 Book Now
+                </a>
               </button>
               <button
                 onClick={() =>
@@ -107,35 +109,35 @@ const Hero = () => {
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="/images/slider/deep Cleaning services.png"
+                  src="/images/slider/warehouse deep clean.jpeg"
                   alt="slider image"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="/images/slider/deep Cleaning service.png"
+                  src="/images/slider/office cleaning.jpeg"
                   alt="slider image"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="/images/slider/window Cleaning service.png"
+                  src="/images/slider/commercial cleaning.jpeg"
                   alt="slider image"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="/images/slider/dubai deep Cleaning services.png"
+                  src="/images/slider/warehouse cleaning.jpeg"
                   alt="slider image"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
                   className="w-max rounded-md"
-                  src="/images/slider/deep Cleaning service dubai.png"
+                  src="/images/slider/regular office cleaning.jpeg"
                   alt="slider image"
                 />
               </SwiperSlide>

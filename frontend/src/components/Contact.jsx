@@ -119,7 +119,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+971 55 555 5555"
                   />
                 </div>
                 <div>
@@ -195,7 +195,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+9710561743356</p>
+                    <p className="text-gray-600">
+                      <a href="tel:+971557940881">+971 55 794 0881</a>
+                    </p>
                   </div>
                 </div>
 

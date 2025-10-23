@@ -153,10 +153,9 @@ const Navbar = () => {
             </NavLink>
 
             <button
-              onClick={() => scrollToSection("contact")}
               className="btn-primary"
             >
-              +9710561743356
+              <a href="https://wa.me/+971557940881">+971557940881</a>
             </button>
           </div>
 
