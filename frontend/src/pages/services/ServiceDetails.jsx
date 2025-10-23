@@ -85,6 +85,7 @@ const ServiceDetails = () => {
               >
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">{service.title}</h1>
                 <p className="text-xl md:text-xl opacity-90 mb-6">{service.sub_title}</p>
+                <p><a style={{padding:"8px 15px", background: "#2563eb",color:"white",fontWeight:"bold", textDecoration:"none"}} href="https://wa.me/+971557940881">Book Now</a></p>
               </motion.div>
             </div>
           </div>
