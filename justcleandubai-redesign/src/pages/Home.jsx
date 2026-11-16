@@ -14,7 +14,7 @@ export default function Home() {
         <div className="container-x relative grid items-center gap-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="eyebrow !text-gold-400">Dubai's premium cleaning company</p>
-            <h1 className="mt-5 text-4xl leading-[1.05] md:text-7xl">Premium deep cleaning, <em className="text-gold-400">beautifully</em> done.</h1>
+            <h1 className="mt-5 text-3xl leading-[1.05] md:text-7xl">Premium deep cleaning, <em className="text-gold-400">beautifully</em> done.</h1>
             <p className="mt-6 max-w-xl text-lg text-white/70">Eco-friendly villa, apartment and office cleaning by trained professionals. Book in minutes, relax in a spotless space.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a href={wa()} className="btn-gold">Book on WhatsApp</a>

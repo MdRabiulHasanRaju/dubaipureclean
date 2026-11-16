@@ -28,7 +28,7 @@ export default function Navbar() {
   const close = () => setOpen(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/5 bg-white/85 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/5 bg-white backdrop-blur-xl">
       <div className={`container-x flex items-center justify-between transition-all duration-300 ${sc ? 'h-16' : 'h-20'}`}>
         <Link to="/" aria-label={`${SITE.name} home`} onClick={close}>
           <img src="/images/logo.png" alt={`${SITE.name} logo`} width="128" height="48" className="h-10 w-auto" />

@@ -3,8 +3,8 @@ import { SITE, wa } from '../config';
 export default function FloatingCTA() {
   const base = 'grid h-14 w-14 place-items-center rounded-full text-white shadow-2xl transition hover:scale-110';
   return (
-    <div className="fixed bottom-5 right-5 z-40 flex flex-col gap-3">
-      <a href={`tel:${SITE.phone}`} aria-label="Call us" className={`${base} bg-ink`}>
+    <div className="fixed bottom-5 px-3 z-40 flex flex-row-reverse justify-between w-[100%]">
+      <a href={`tel:${SITE.phone}`} aria-label="Call us" className={`${base} bg-[#007bff]`}>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.1 22 2 13.9 2 3a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1z" /></svg>
       </a>
       <a href={wa()} aria-label="Chat on WhatsApp" className={`${base} bg-[#25D366]`}>
