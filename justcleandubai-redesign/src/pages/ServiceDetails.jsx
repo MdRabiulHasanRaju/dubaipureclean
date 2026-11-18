@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import Seo from '../components/Seo';
 import { Testimonials, CtaBand } from '../components/Sections';
 import { SITE, wa, getJSON, img } from '../config';
+import GoogleReviewsSection from "../components/GoogleReviewsSection";
 
 export default function ServiceDetails() {
   const { link } = useParams();
@@ -94,7 +95,8 @@ export default function ServiceDetails() {
           </aside>
         </div>
       </section>
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <GoogleReviewsSection />
       <CtaBand />
     </main>
   );

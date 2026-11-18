@@ -1,5 +1,6 @@
 import Seo from '../components/Seo';
 import HeroSection from "../components/HeroSection";
+import GoogleReviewsSection from "../components/GoogleReviewsSection";
 import { Services, Process, WhyUs, Testimonials, Faq, CtaBand, Head, homeFaqs } from '../components/Sections';
 import { SITE, wa } from '../config';
 
@@ -42,7 +43,8 @@ export default function Home() {
       <Services />
       <Process />
       <WhyUs />
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <GoogleReviewsSection />
       <section className="section">
         <div className="container-x max-w-3xl">
           <Head eyebrow="FAQ" title="Questions, answered" />
