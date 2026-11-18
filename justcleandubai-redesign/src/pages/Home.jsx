@@ -1,4 +1,5 @@
 import Seo from '../components/Seo';
+import HeroSection from "../components/HeroSection";
 import { Services, Process, WhyUs, Testimonials, Faq, CtaBand, Head, homeFaqs } from '../components/Sections';
 import { SITE, wa } from '../config';
 
@@ -9,7 +10,10 @@ export default function Home() {
   return (
     <main>
       <Seo path="/" title="Premium Deep Cleaning Services in Dubai" description="Villa, apartment, office, window and AC cleaning across Dubai. Eco-friendly products, trained teams and same-day slots. Get a free quote on WhatsApp." schema={schema} />
-      <section className="relative overflow-hidden bg-ink-900 pb-20 pt-32 text-white md:pb-28 md:pt-40">
+
+
+
+      {/* <section className="relative overflow-hidden bg-ink-900 pb-20 pt-32 text-white md:pb-28 md:pt-40">
         <div className="pointer-events-none absolute -left-40 top-0 h-[28rem] w-[28rem] rounded-full bg-gold-500/15 blur-3xl" />
         <div className="container-x relative grid items-center gap-14 lg:grid-cols-12">
           <div className="lg:col-span-7">
@@ -32,7 +36,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <HeroSection />
       <Services />
       <Process />
       <WhyUs />
